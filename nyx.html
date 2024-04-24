@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Form</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('Nyx.jpg');
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background-color: #fff7fb;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      padding: 27px;
+      width: 560px;
+      height: 420;
+      text-align: left;
+    }
+    h1 {
+      font-size: 30px;
+      color: #ff69b4;
+      margin-top: 0;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 17px;
+    }
+    label {
+      display: block;
+      color: #6a7d8a;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      font-size: 20px;
+    }
+    input[type="submit"] {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 5px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .success-message {
+      display: none;
+      background-color: #fff7fb;
+      border-radius: 100px;
+      padding: 20px;
+      font-size: 29px;
+      color: #ff69b4;
+      margin-top: 30px;
+      text-align: center;
+      justify-content: center;
+    }
+    .show-message {
+      display: block;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .sites { text-align: center;}
+  </style>
+  <script>
+    function submitForm() {
+      var form = document.getElementById("signup-form");
+      var successMessage = document.getElementById("success-message");
+      form.style.display = "none";
+      successMessage.classList.add("show-message");
+    }
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Sign Up</h1>
+    <form id="signup-form" onsubmit="event.preventDefault(); submitForm();">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Sign Up">
+      </div>
+    <div class=sites>
+    <p>or continue with:</p>
+    </div>
+    <div class="social-icons">
+      <img src="Google.jpg" alt="Google">
+      <img src="Facebook.jpg" alt="Facebook">
+      <img src="Telegram.jpg" alt="iCloud">
+      </form>
+    </div>
+    <div id="success-message" class="success-message">
+      <p>You have successfully signed up ^^</p>
+    </div>
+  </div>
+</body>
+</html>
